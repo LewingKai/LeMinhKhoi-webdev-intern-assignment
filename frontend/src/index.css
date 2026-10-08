@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --color-border: hsl(214 20% 86%);
+  --color-input: hsl(214 20% 86%);
+  --color-ring: hsl(213 74% 45%);
+  --color-background: hsl(210 33% 98%);
+  --color-foreground: hsl(222 34% 16%);
+  --color-primary: hsl(213 74% 45%);
+  --color-primary-foreground: hsl(210 40% 98%);
+  --color-secondary: hsl(210 24% 94%);
+  --color-secondary-foreground: hsl(222 34% 20%);
+  --color-destructive: hsl(0 72% 51%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  --color-muted: hsl(210 22% 94%);
+  --color-muted-foreground: hsl(215 16% 42%);
+  --color-accent: hsl(214 60% 95%);
+  --color-accent-foreground: hsl(222 34% 20%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(222 34% 16%);
+  --radius: 1rem;
+  --chart-1: hsl(213 74% 45%);
+  --chart-2: hsl(173 50% 42%);
+  --chart-3: hsl(221 58% 58%);
+  --chart-4: hsl(37 88% 57%);
+  --chart-5: hsl(2 78% 62%);
+}
+
+:root {
+  --border: 214 20% 86%;
+  --input: 214 20% 86%;
+  --ring: 213 74% 45%;
+  --background: 210 33% 98%;
+  --foreground: 222 34% 16%;
+  --primary: 213 74% 45%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 24% 94%;
+  --secondary-foreground: 222 34% 20%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+  --muted: 210 22% 94%;
+  --muted-foreground: 215 16% 42%;
+  --accent: 214 60% 95%;
+  --accent-foreground: 222 34% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 34% 16%;
+  --chart-1: 213 74% 45%;
+  --chart-2: 173 50% 42%;
+  --chart-3: 221 58% 58%;
+  --chart-4: 37 88% 57%;
+  --chart-5: 2 78% 62%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(
+      circle at 2% 0%,
+      hsl(var(--primary) / 0.12),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      hsl(var(--chart-3) / 0.08),
+      transparent 28%
+    ),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+::selection {
+  background-color: hsl(var(--primary) / 0.18);
+  color: hsl(var(--foreground));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
